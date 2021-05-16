@@ -12,7 +12,7 @@ const FILES_TO_CACHE = [
   const PRECACHE = 'precache-v1';
   const RUNTIME = 'runtime';
   
-  self.addEventListener('install', (event) => {
+self.addEventListener('install', (event) => {
     event.waitUntil(
       caches
         .open(PRECACHE)
@@ -22,7 +22,7 @@ const FILES_TO_CACHE = [
   });
   
   // The activate handler takes care of cleaning up old caches.
-  self.addEventListener('activate', (event) => {
+self.addEventListener('activate', (event) => {
     const currentCaches = [PRECACHE, RUNTIME];
     event.waitUntil(
       caches
@@ -49,7 +49,6 @@ const FILES_TO_CACHE = [
           if (cachedResponse) {
             return cachedResponse;
           }
-
           return caches.open(RUNTIME).then((cache) => {
             return fetch(event.request).then((response) => {
               return cache.put(event.request, response.clone()).then(() => {
