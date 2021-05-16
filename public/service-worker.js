@@ -60,7 +60,7 @@ const FILES_TO_CACHE = [
               // Network request failed, try to get it from the cache.
               return cache.match(evt.request);
             });
-        })
+        }).catch(err => console.log(err))
       );
   
       return;
