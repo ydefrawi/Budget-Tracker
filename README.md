@@ -1,5 +1,8 @@
 # Budget-Tracker
 
+![Screenshot](images/Budget-Screenshot.PNG)
+
+
 ## User Story
 AS AN avid traveller
 I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
